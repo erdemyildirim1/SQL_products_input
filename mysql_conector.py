@@ -1,8 +1,10 @@
 import mysql.connector
 
 
-connection=mysql.connector.connect(host="your host name",user="your user name",password="your password",database="database name")
+connection=mysql.connector.connect(host="your host name",user="your user name",password="your password",database="database name") # type your informations betweens ""
 cursor=connection.cursor()
+
+cursor.execute("CREATE TABLE products (name VARCHAR(255),price DECIMAL,imageUrl VARCHAR(255),description VARCHAR(255))") #That will create a table named products
 
 def insertProduct(self):
 
@@ -68,4 +70,3 @@ while True:
                 break
             
 
-# mycursor.execute("CREATE TABLE customers (name VARCHAR(255),adress VARCHAR(255))")
